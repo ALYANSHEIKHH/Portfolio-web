@@ -51,5 +51,23 @@
     <script>
       AOS.init();
     </script>
+    <script>
+      const hamburg = document.querySelector(".hamburg");
+const cancel = document.querySelector(".cancel");
+const navbar = document.querySelector(".dropmenu");
+
+hamburg.addEventListener("click", () => {
+  navbar.style.transform = "translateY(0px)";
+  hamburg.style.display = "none";
+  cancel.style.display = "block"; // Show cancel icon
+});
+
+cancel.addEventListener("click", () => {
+  navbar.style.transform = "translateY(-300px)";
+  hamburg.style.display = "block"; // Show hamburg icon
+  cancel.style.display = "none"; // Hide cancel icon
+});
+
+    </script>
   </body>
 </html>
